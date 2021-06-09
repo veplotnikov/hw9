@@ -2,6 +2,5 @@
 packages:
  - docker.io
 
-services:
- - docker
+services: docker
 
