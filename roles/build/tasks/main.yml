@@ -9,4 +9,8 @@
   synchronize: src={{ app_name }} dest={{ app_dir }}
 
 - name: Build images
-  docker_image: name={{ images }} build.path= {{ app_dir }}/{{ app_name }}/{{images}}/ source=build
+  docker_image: 
+    name: {{ images }} 
+    build:
+      path: {{ app_dir }}/{{ app_name }}/{{images}}/ 
+    source: build
