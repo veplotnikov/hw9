@@ -7,9 +7,16 @@
    - main
   
 
-- name: Bild configureation
+- name: Bild configuration
   hosts: bild
   become: yes
 
   roles:
    - build
+
+- name: Start prod container
+  hosts: prod
+  become: yes
+
+  roles:
+    - prod
