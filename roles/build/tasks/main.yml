@@ -34,7 +34,9 @@
 
 - name: Build image tomcat
   docker_image: 
-    name: tomcat 
+    name: tomcat
+    repository: volodyaaggregion/hw9
+    force_tag: yes
     build:
       path: '/{{ app_dir }}/{{ app_name }}/tomcat/' 
     source: build
