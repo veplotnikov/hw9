@@ -7,3 +7,7 @@ app_dir:
 
 app_name:
   - boxfuse
+
+images:
+  - tomcat
+  - maven
