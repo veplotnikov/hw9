@@ -1,0 +1,13 @@
+---
+volume_name:
+  - volume_one
+
+app_dir:
+  - /app/
+
+app_name:
+  - boxfuse
+
+images:
+  - tomcat
+  - maven
