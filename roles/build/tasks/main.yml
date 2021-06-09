@@ -21,5 +21,5 @@
     name: '{{ item }}'
     image: '{{ item }}'
     volumes:
-      - {{ volume_name }}:/opt/tomcat/latest/webapps/  
+      - volume_one:/opt/tomcat/latest/webapps/  
   loop: "{{ images }}"
