@@ -19,7 +19,7 @@
 - name: Run containers
   docker_container:
     name: '{{ item }}'
-      image: '{{ item }}'
-      volumes:
+    image: '{{ item }}'
+    volumes:
       - {{ volume_name }}:/opt/tomcat/latest/webapps/  
   loop: "{{ images }}"
