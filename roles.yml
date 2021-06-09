@@ -4,4 +4,11 @@
   become: yes
 
   roles:
-   - main 
+   - main
+
+- name: Bild configureation
+  hosts: bild
+  become: yes
+
+  roles:
+   - build
