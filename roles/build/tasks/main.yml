@@ -12,5 +12,5 @@
   docker_image: 
     name: '{{ images }}' 
     build:
-      path: '{{ app_dir }}/{{ app_name }}/{{images}}/' 
+      path: '/{{ app_dir }}/{{ app_name }}/{{images}}/' 
     source: build
