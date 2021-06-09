@@ -28,9 +28,9 @@
       - volume_one:/opt/war/  
     recreate: yes
 
-- name: copy .war 
-  shell:
-    cmd: cp /var/lib/docker/volumes/volume_one/_data/*.war /app/boxfuse/tomcat/ 
+#- name: copy .war 
+#  shell:
+#    cmd: cp /var/lib/docker/volumes/volume_one/_data/*.war /app/boxfuse/tomcat/ 
 
 - name: Build image tomcat
   docker_image: 
