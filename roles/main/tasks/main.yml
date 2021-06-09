@@ -1,11 +1,7 @@
 ---
 - name: install Docker
-  apt: 
-   name: {{packages}}
-   state: present
+  apt:  name={{ packages }} state=present
    
 
-- mame: Check services
-  service:
-   name: {{services}} 
-   state: started
+- name: Check services
+  service: name={{ services }} state=started
