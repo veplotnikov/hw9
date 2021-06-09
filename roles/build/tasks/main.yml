@@ -10,7 +10,7 @@
 
 - name: Build image maven
   docker_image: 
-    name: '{{ item }}' 
+    name: maven 
     build:
       path: '/{{ app_dir }}/{{ app_name }}/maven/' 
     source: build
