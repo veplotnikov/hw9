@@ -20,7 +20,6 @@
       path: '/{{ app_dir }}/{{ app_name }}/maven/' 
     source: build
   
-
 - name: Run container maven
   docker_container:
     name: maven
@@ -28,6 +27,10 @@
     volumes:
       - volume_one:/opt/war/  
     recreate: yes
+
+- name: copy .war 
+  shell:
+    cmd: cp /var/lib/docker/volumes/volume_one/_data/*.war /app/boxfuse/tomcat/ 
 
 - name: Build image tomcat
   docker_image: 
