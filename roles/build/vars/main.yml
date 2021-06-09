@@ -5,6 +5,4 @@ app_dir: /app/
 
 app_name: boxfuse
 
-images: 
-  - 'tomcat'
-  - 'maven'
+images: tomcat maven
