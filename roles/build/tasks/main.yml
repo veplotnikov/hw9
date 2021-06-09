@@ -10,7 +10,8 @@
 
 - name: Build images
   docker_image: 
-    name: '{{ images }}' 
+    name: '{{ item }}' 
     build:
-      path: '/{{ app_dir }}/{{ app_name }}/{{ images | string }}/' 
+      path: '/{{ app_dir }}/{{ app_name }}/{{ item }}/' 
     source: build
+  loop: "{{ images }}"
