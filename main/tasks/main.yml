@@ -1,0 +1,10 @@
+---
+- name: install Docker
+  apt: 
+   name: {{packeges}}
+   state: present
+
+- mame: Check services
+  service:
+   name: {{services}} 
+   state: started
