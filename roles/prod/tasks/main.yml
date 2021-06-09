@@ -1,0 +1,7 @@
+---
+- name: Run container maven
+  docker_container:
+    name: tomcat
+    image: volodyaaggregion/hw9:latest
+    ports:
+      - "8080:8080"
