@@ -1,6 +1,6 @@
 ---
 - name: install Docker
-  apt:  name={{ packages }} state=present
+  apt:  name={{ packages }} state=present update_cache=yes
    
 
 - name: Check services
