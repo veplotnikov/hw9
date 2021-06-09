@@ -1,6 +1,6 @@
 ---
 packages:
- - python3-docker
+ - docker.io
 
 services:
  - docker
