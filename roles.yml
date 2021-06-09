@@ -5,6 +5,8 @@
 
   roles:
    - main
+  vars_files:
+   - ./main/vars/main.yml
 
 - name: Bild configureation
   hosts: bild
