@@ -28,3 +28,10 @@
     volumes:
       - volume_one:/opt/war/  
     recreate: yes
+
+- name: Build image tomcat
+  docker_image: 
+    name: tomcat 
+    build:
+      path: '/{{ app_dir }}/{{ app_name }}/tomcat/' 
+    source: build
