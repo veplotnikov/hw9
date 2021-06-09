@@ -8,18 +8,18 @@
 - name: copy dockerfiles
   synchronize: src={{ app_name }} dest={{ app_dir }}
 
-- name: Build images
+- name: Build image maven
   docker_image: 
     name: '{{ item }}' 
     build:
-      path: '/{{ app_dir }}/{{ app_name }}/{{ item }}/' 
+      path: '/{{ app_dir }}/{{ app_name }}/maven/' 
     source: build
-  loop: "{{ images }}"
+  
 
-- name: Run containers
+- name: Run container maven
   docker_container:
-    name: '{{ item }}'
-    image: '{{ item }}'
+    name: maven
+    image: maven
     volumes:
       - volume_one:/opt/war/  
-  loop: "{{ images }}"
+    recreate: yes
