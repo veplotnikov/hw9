@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt install default-jdk  maven git -y
 RUN mkdir /opt/boxfuse 
-RUN mkdir -p /opt/tomcat/webapps/
+RUN mkdir -p /opt/war/
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /opt/boxfuse/
 RUN mvn -f /opt/boxfuse/pom.xml package
-RUN cp /opt/boxfuse/target/hello-1.0.war /opt/tomcat/webapps/
+RUN cp /opt/boxfuse/target/hello-1.0.war /opt/war/
