@@ -1,0 +1,14 @@
+---
+- name: Create a volume
+  docker_volume:
+    name: {{volume_name}}
+
+- name: Creates directory
+  file:
+    path: {{app_dir}}
+    state: directory
+
+- name: copy dockerfiles
+  synchronise:
+    src: {{app_name}}
+    dest: {{app_dir}}
