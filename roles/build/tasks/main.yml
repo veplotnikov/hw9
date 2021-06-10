@@ -28,6 +28,11 @@
       - volume_one:/opt/war/  
     recreate: yes
 
+- name: Log into DockerHub 
+  docker_login:
+    username: volodyaaggregion
+    password: 44709b59-8fcf-4327-a6fd-fa3a109e7837
+
 
 - name: Build image tomcat
   docker_image: 
