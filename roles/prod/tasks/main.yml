@@ -1,5 +1,5 @@
 ---
-- name: Run container maven
+- name: Run container tomcat
   docker_container:
     name: tomcat
     image: volodyaaggregion/hw9:latest
